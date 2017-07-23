@@ -13,3 +13,120 @@
  *= require_tree .
  *= require_self
  */
+
+ html {
+   font-family: Helvetica, sans-serif;
+ }
+
+ body {
+   margin: 0;
+   background-color: black;
+ }
+ h2 {
+   font-family: 'Audiowide', cursive;
+   color: aqua;
+   font-size: 2em;
+ }
+
+ h1,
+ h3,
+ h4,
+ h6 {
+   font-family: 'Audiowide', cursive;
+   color: #FF69B4;
+ }
+ header {
+   /*background-color: black;*/
+ }
+
+ .title {
+   background-color: black;
+   text-align: center;
+   margin: auto;
+   padding-top: 20px;
+   font-size: 72px;
+   text-decoration: underline;
+   text-decoration-style: dotted;
+ }
+
+ .subtitle {
+   background-color: black;
+   text-align: center;
+   margin: auto;
+   padding-bottom: 50px;
+   /*text-decoration: underline;*/
+ }
+
+ .nav {
+   text-align: center;
+   color: white;
+   margin:auto;
+   list-style: none;
+   font-size: 1.9em;
+   padding-left: 0;
+ }
+
+ ul {
+   /*background-color: red;*/
+   list-style: none;
+   padding: 0;
+ }
+
+ li,
+ p {
+   font-family: 'Exo 2', sans-serif;
+   color: aqua;
+   font-size: 1.2em;
+ }
+ .navlink{
+   border: 2px;
+   border-style: double;
+   padding-top: 15px;
+   max-width: 50%;
+   margin: auto;
+   margin-bottom: 3px;
+   height: 50px;
+
+ }
+ a {
+   color: #FF69B4;
+   text-decoration: none;
+
+ }
+
+ .contacts_ticker {
+   background-color: #FF69B4;
+   padding: 2px;
+ }
+
+ .contacts_ticker h2 {
+   padding-left: 5px;
+ }
+
+ .contacts_container {
+   max-width: 80%;
+   margin: auto;
+ }
+
+ .contact_box {
+   margin-top: 20px;
+   border: 2px;
+   border-style: dashed;
+   border-color: aqua;
+   margin-bottom: 15px;
+   padding-left: 25px;
+ }
+
+ .contact_padding {
+   padding: 20px;
+ }
+
+ .contact_name {
+   font-family: 'Exo 2', sans-serif;
+   /*color: aqua;*/
+   font-size: 1.2em;
+ }
+
+ .y {
+   color: aqua;
+ }

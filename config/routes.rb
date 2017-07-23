@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   post '/users' => 'users#create'
 
   get '/:id' => 'contacts#show'
+  get '/contacts/new' => 'contacts#create'
 
 end
