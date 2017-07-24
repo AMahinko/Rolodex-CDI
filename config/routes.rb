@@ -14,5 +14,9 @@ Rails.application.routes.draw do
 
   get '/:id' => 'contacts#show'
   get '/contacts/new' => 'contacts#create'
+  get '/contacts/:id' => 'contacts#find'
+
+  get '/contacts/delete/:id/' => 'contacts#destroy'
+  post '/contacts/delete/:id/' => 'contacts#destroy'
 
 end

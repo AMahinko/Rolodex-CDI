@@ -39,6 +39,11 @@
    /*background-color: black;*/
  }
 
+ .login_status {
+   text-align: right;
+   margin-right: 20px;
+ }
+
  .title {
    background-color: black;
    text-align: center;

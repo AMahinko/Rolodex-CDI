@@ -11,17 +11,20 @@
 
   <body>
     <header>
+      <% if current_user %>
+        <p class = 'login_status'>Signed in as <%= @user.username %> | <a href="/logout">Logout</a></p>
+      <% end %>
+
       <h1 class="title">Rolodex</h1>
       <h4 class="subtitle">client relations management system</h4>
 
       <% if current_user %>
-      <p>Signed in as <%= @user.username %> | <a href="/logout">Logout</a></p>
       <ul class="nav">
         <a href="/<%= @user.id %>"><li class="navlink">List all contacts</li></a>
         <a href="/new"><li class="navlink">Add a contact</li></a>
         <a href="/"><li class="navlink">About</li></a>
         <% end %>
-        
+
       </ul>
 
     </header>

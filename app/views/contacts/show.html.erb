@@ -1,1 +1,19 @@
 <h1>Contacts</h1>
+
+
+<% Contact.all.each do |contact| %>
+  <% if contact.user_id == @user.id %>
+
+    <div>
+      <h2><%= contact.first_name + " " + contact.last_name %></h2>
+      <p><%= contact.email %> ||  <%= contact.phone %></p>
+
+      <p>---------------------------------------------</p>
+
+      <p><a href="#">EDIT CONTACT</a>  ||  <a href="/contacts/delete/<%=contact.id%>">DELETE CONTACT</a></p>
+
+    </div>
+
+
+  <% end %>
+<% end %>
