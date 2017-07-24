@@ -35,6 +35,34 @@
    font-family: 'Audiowide', cursive;
    color: #FF69B4;
  }
+
+form {
+  margin: auto;
+  margin-top: 20px;
+  display: block;
+  width: 200px;
+}
+
+input, textarea {
+  background-color: rgba(0,0,0,0);
+  border: solid aqua 1px;
+  margin: 5px;
+  padding: 3px;
+  color: #FF69B4;
+}
+
+input::placeholder, textarea::placeholder, label{
+  color: #FF69B4;
+}
+
+label {
+  margin-top: 5px;
+}
+
+input[type=button],input[type=submit],button {
+    color: #FF69B4;
+}
+
  header {
    /*background-color: black;*/
  }
@@ -131,7 +159,7 @@
    /*color: aqua;*/
    font-size: 1.2em;
  }
-
+/*
  .y {
    color: aqua;
- }
+ }*/

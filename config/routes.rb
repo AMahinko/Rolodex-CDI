@@ -13,9 +13,9 @@ Rails.application.routes.draw do
   post '/users' => 'users#create'
 
   get '/:id' => 'contacts#index'
-  resources :users do
-    resources :contacts
-  end
+  resources :users
+  
+  resources :contacts
 
   # get '/contact/:id' => 'contacts#show'
   # get '/contacts/new' => 'contacts#create'

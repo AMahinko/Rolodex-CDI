@@ -6,6 +6,6 @@
 
       <p>---------------------------------------------</p>
 
-      <p><%= link_to 'EDIT CONTACT', edit_user_contact_path(@user.id, @contact.id) %>  ||  <%= link_to "DELETE CONTACT", user_contact_path(@user.id, @contact.id), :method => :delete%>
+      <p><%= link_to 'EDIT CONTACT', edit_contact_path(@user.id, @contact.id) %>  ||  <%= link_to "DELETE CONTACT", contact_path(@user.id, @contact.id), :method => :delete%>
 
     </div>
