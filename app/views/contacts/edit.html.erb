@@ -1,0 +1,11 @@
+
+
+<%= form_for user_contact_path do |f| %>
+<%= f.text_field :first_name, placeholder: @contact.first_name %><br />
+<%= f.text_field :last_name, placeholder: @contact.last_name %><br />
+<%= f.text_field :email, placeholder: @contact.email %><br />
+<%= f.text_field :phone, placeholder: @contact.phone %><br />
+<%= f.text_area :note, placeholder: @contact.note %>
+<%= f.submit %>
+
+  <% end %>

@@ -12,11 +12,16 @@ Rails.application.routes.draw do
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
 
-  get '/:id' => 'contacts#show'
-  get '/contacts/new' => 'contacts#create'
-  get '/contacts/:id' => 'contacts#find'
+  get '/:id' => 'contacts#index'
+  resources :users do
+    resources :contacts
+  end
 
-  get '/contacts/delete/:id/' => 'contacts#destroy'
-  post '/contacts/delete/:id/' => 'contacts#destroy'
+  # get '/contact/:id' => 'contacts#show'
+  # get '/contacts/new' => 'contacts#create'
+  # get '/contacts/edit/:id' => 'contacts#edit'
+  #
+  # get '/contacts/delete/:id/' => 'contacts#destroy'
+  # post '/contacts/delete/:id/' => 'contacts#destroy'
 
 end

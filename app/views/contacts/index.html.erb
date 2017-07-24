@@ -1,0 +1,21 @@
+<h1>Contacts</h1>
+
+
+<% @contacts.each do |contact| %>
+  <% if contact.user_id == @user.id %>
+
+    <div>
+      <a href="<%=user_contact_path(@user.id, contact.id)%>"><h2><%= contact.first_name + " " + contact.last_name %></h2></a>
+      <p><%= contact.email %> ||  <%= contact.phone %></p>
+      <p>---------------------------------------------</p>
+      <p>NOTES: <%= contact.note  %></p>
+
+      <p>---------------------------------------------</p>
+
+      <p> <%= link_to 'EDIT CONTACT', edit_user_contact_path(@user.id, contact.id) %>  ||  <%= link_to "DELETE CONTACT", user_contact_path(@user.id, contact.id), :method => :delete%>
+
+    </div>
+
+
+  <% end %>
+<% end %>

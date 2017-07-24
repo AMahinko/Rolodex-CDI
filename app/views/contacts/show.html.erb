@@ -1,19 +1,11 @@
-<h1>Contacts</h1>
-
-
-<% Contact.all.each do |contact| %>
-  <% if contact.user_id == @user.id %>
 
     <div>
-      <h2><%= contact.first_name + " " + contact.last_name %></h2>
-      <p><%= contact.email %> ||  <%= contact.phone %></p>
+      <h2><%= @contact.first_name + " " + @contact.last_name %></h2>
+      <p><%= @contact.email %> ||  <%= @contact.phone %></p>
+      <p>NOTES: <%= @contact.note  %></p>
 
       <p>---------------------------------------------</p>
 
-      <p><a href="#">EDIT CONTACT</a>  ||  <a href="/contacts/delete/<%=contact.id%>">DELETE CONTACT</a></p>
+      <p><%= link_to 'EDIT CONTACT', edit_user_contact_path(@user.id, @contact.id) %>  ||  <%= link_to "DELETE CONTACT", user_contact_path(@user.id, @contact.id), :method => :delete%>
 
     </div>
-
-
-  <% end %>
-<% end %>
