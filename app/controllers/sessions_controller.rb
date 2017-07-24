@@ -1,11 +1,13 @@
 class SessionsController < ApplicationController
   before_action :check_signed_in
+  skip_before_action :check_signed_in, only: [:destroy]
 
   def check_signed_in
     if current_user
       redirect_to "/#{@current_user.id}"
     end
   end
+
 
   def new
   end
@@ -17,7 +19,7 @@ class SessionsController < ApplicationController
         # Save the user id inside the browser cookie. This is how we keep the user
         # logged in when they navigate around our website.
         session[:user_id] = user.id
-        redirect_to '/#{user.id}'
+        redirect_to "/#{user.id}"
         puts 'login green'
 
       else
@@ -29,6 +31,7 @@ class SessionsController < ApplicationController
 
     def destroy
       session[:user_id] = nil
+      @current_user = nil
       redirect_to '/login'
     end
 end
