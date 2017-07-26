@@ -1,7 +1,11 @@
 require 'test_helper'
+require 'capybara/rspec'
+require 'users_controller'
 
 class UsersControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+
+
+
+
+
 end

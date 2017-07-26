@@ -6,6 +6,18 @@ class ContactsController < ApplicationController
     @contacts = Contact.all
   end
 
+  def new
+    @contact = Contact.new
+  end
+
+  def create
+    @contact = Contact.new(contact_params)
+    @contact.user_id = @current_user.id
+    if @contact.save
+      redirect_to "/#{@current_user.id}"
+    end
+  end
+
   def show
     @user = @current_user
     @contact = Contact.find(params[:id])

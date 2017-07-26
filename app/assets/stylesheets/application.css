@@ -28,6 +28,14 @@
    font-size: 2em;
  }
 
+ #main_title {
+   text-align: center;
+ }
+
+ #signin {
+   text-align: center;
+ }
+
  h1,
  h3,
  h4,
@@ -61,6 +69,7 @@ label {
 
 input[type=button],input[type=submit],button {
     color: #FF69B4;
+    font-family: 'Exo 2', sans-serif;
 }
 
  header {
@@ -159,7 +168,3 @@ input[type=button],input[type=submit],button {
    /*color: aqua;*/
    font-size: 1.2em;
  }
-/*
- .y {
-   color: aqua;
- }*/

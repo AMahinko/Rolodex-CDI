@@ -4,6 +4,8 @@ class SessionsController < ApplicationController
 
   def check_signed_in
     if current_user
+      #### CHECK TO SEE IF THIS ISN'T HACKY
+      session[:user_id] = @current_user.id
       redirect_to "/#{@current_user.id}"
     end
   end
@@ -19,13 +21,13 @@ class SessionsController < ApplicationController
         # Save the user id inside the browser cookie. This is how we keep the user
         # logged in when they navigate around our website.
         session[:user_id] = user.id
+        # flash[:alert] = "Success!"
         redirect_to "/#{user.id}"
-        puts 'login green'
 
       else
       # If user's login doesn't work, send them back to the login form.
+        flash[:alert] = "Invalid authentication"
         redirect_to '/login'
-        puts 'login red'
       end
   end
 

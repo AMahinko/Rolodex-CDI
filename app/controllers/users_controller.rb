@@ -7,9 +7,11 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      puts "SAVED"
-      redirect_to '/show'
+      @current_user = @user
+      session[:user_id] = @current_user.id
+      redirect_to "/#{current_user.id}"
     else
+      flash[:alert] = "Your information was invalid"
       redirect_to '/signup'
     end
   end
@@ -17,7 +19,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:email, :username, :password, :password_confirmation)
+    params.require(:user).permit(:email, :password, :password_confirmation)
   end
 
 end
