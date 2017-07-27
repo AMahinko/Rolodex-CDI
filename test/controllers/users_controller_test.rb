@@ -4,8 +4,4 @@ require 'users_controller'
 
 class UsersControllerTest < ActionDispatch::IntegrationTest
 
-
-
-
-
 end

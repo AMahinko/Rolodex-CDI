@@ -12,8 +12,8 @@
   <body>
     <header>
       <% if current_user %>
-        <p class = 'login_status'>Signed in as <%= @current_user.email %> | <a href="/logout">Logout</a></p>
-      <% end %>
+        <p class = 'login_status'>Signed in as <%= @current_user.email %> | <a href="/logout">Logout</a> | <%= link_to "DELETE ACCOUNT", user_path(@current_user.id), :method => :delete, :confirm => "Warning! This action will PERMANANTLY delete your account and all of your contacts. Continue?"%>
+      <% end %></p>
 
       <h1 class="title">Rolodex</h1>
       <h4 class="subtitle">contact information database</h4>

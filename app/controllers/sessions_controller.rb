@@ -5,7 +5,6 @@ class SessionsController < ApplicationController
   def check_signed_in
     if current_user
       #### CHECK TO SEE IF THIS ISN'T HACKY
-      session[:user_id] = @current_user.id
       redirect_to "/#{@current_user.id}"
     end
   end

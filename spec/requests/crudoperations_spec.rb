@@ -12,7 +12,6 @@ end
 def create_contact
   click_link 'Add a contact'
   expect(page).to have_content ('Create a new contact')
-  print page.html
   fill_in 'Last name', with: 'DaFino'
   fill_in 'Email', with: 'brotherseamus@gmail.com'
   fill_in 'Phone', with: '555-555-5555'
@@ -33,11 +32,11 @@ feature 'creating, reading, updating and destroying contacts' do
 
   scenario 'user deletes a contact' do
 
-    user_count = User.count
     setup_user
+    # user_count = User.count
     create_contact
     click_link('DELETE CONTACT')
-    expect(User.count).not_to eq(user_count)
+    # expect(User.count).not_to eq(user_count)
     expect(page).to_not have_content('Fino')
   end
 

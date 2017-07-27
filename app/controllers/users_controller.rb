@@ -16,6 +16,18 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    # if session[:id] == params[:id]
+    #   @user.delete
+      current_user.destroy
+      session[:user_id] = nil
+      flash[:alert] = 'Account deleted!'
+      redirect_to '/'
+    # end
+
+
+  end
+
 
   private
   def user_params

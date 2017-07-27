@@ -20,7 +20,11 @@ class ContactsController < ApplicationController
 
   def show
     @user = @current_user
-    @contact = Contact.find(params[:id])
+    if @user.id == params[:user_id]
+      @contact = Contact.find(params[:id])
+    else
+      redirect_to '/'
+    end 
   end
 
   def destroy
