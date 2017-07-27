@@ -12,6 +12,7 @@ end
 def create_contact
   click_link 'Add a contact'
   expect(page).to have_content ('Create a new contact')
+  print page.html
   fill_in 'Last name', with: 'DaFino'
   fill_in 'Email', with: 'brotherseamus@gmail.com'
   fill_in 'Phone', with: '555-555-5555'
@@ -45,7 +46,7 @@ feature 'creating, reading, updating and destroying contacts' do
     create_contact
     click_link('EDIT CONTACT')
     fill_in 'Note', with: 'Like an Irish monk'
-    click_button('UPDATE')
+    click_button('SAVE')
     expect(page).to have_content('Like an Irish monk')
   end
 
