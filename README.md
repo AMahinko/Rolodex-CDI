@@ -30,19 +30,19 @@ Rolodex is built on the rails framework, and rails has a robust library of short
 
 (The CSS is old code, that I copied over. Partly because a bit of presentation never killed anyone, but also to avoid eye-scorching white backgrounds while working on it)
 
-### Total time taken: 10-12 hours(estimated)
+#### Total time taken: 10-12 hours (estimated)
 
 Probably longer, to be honest. I ran into a few stubborn bugs, and went through quite a few phases of refactoring.
 
-### Test coverage: 98.85% (Get the breakdown by going to /coverage and opening index.html in any browser)
+#### Test coverage: 98.85% (Get the breakdown by going to /coverage and opening index.html in any browser)
 
 I elected to focus mainly on integration testing and simulating user input, instead of unit testing, as there's very little in the way of business logic on this app, and it's more important that each link/button goes where it needs to and performs the correct database operations.
 
-### Addons
+#### Addons
 
 RSpec, Capybara and simplecov for testing, as well as bcrypt for authentication
 
-### Future additions
+#### Future additions
 
 .. Scalability. Paginate the contacts and allow the user to browse through them with AJAX requests, so the user isn't requesting all of their contacts at once whenever they log in.
 
