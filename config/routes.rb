@@ -9,19 +9,10 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
 
-  get '/signup' => 'users#new'
-  post '/users' => 'users#create'
-
   get '/:id' => 'contacts#index'
   resources :users
-  
+
   resources :contacts
 
-  # get '/contact/:id' => 'contacts#show'
-  # get '/contacts/new' => 'contacts#create'
-  # get '/contacts/edit/:id' => 'contacts#edit'
-  #
-  # get '/contacts/delete/:id/' => 'contacts#destroy'
-  # post '/contacts/delete/:id/' => 'contacts#destroy'
 
 end
