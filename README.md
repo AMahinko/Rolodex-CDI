@@ -4,7 +4,9 @@
 Note: This guide assumes you have Ruby 2+, Rails 4+, Bundler and Ruby gems already installed.
 
 1. Install the Heroku CLI
+
 ..* [OSX installer](https://cli-assets.heroku.com/branches/stable/heroku-osx.pkg)
+
 ..* `wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh` on Linux
 
 2. [Get a Heroku account](www.heroku.com)
