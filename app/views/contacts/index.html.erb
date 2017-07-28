@@ -5,7 +5,7 @@
   <% if contact.user_id == @user.id %>
 
     <div>
-      <a href="<%=contact_path(contact.id)%>"><h2><%= contact.first_name + " " + contact.last_name %></h2></a>
+      <a href="<%=contact_path(contact)%>"><h2><%= contact.first_name + " " + contact.last_name %></h2></a>
       <p><%= contact.email %> ||  <%= contact.phone %></p>
       <p>---------------------------------------------</p>
       <p>NOTES: <%= contact.note  %></p>

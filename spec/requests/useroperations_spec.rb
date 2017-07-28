@@ -18,6 +18,16 @@ end
       expect(User.count).not_to eq(before_count)
       expect(page).to have_content('Contacts')
     end
+
+    scenario 'new users email not unique' do
+      create_user
+      click_link 'Logout'
+      before_count = User.count
+      create_user
+      expect(User.count).to eq(before_count)
+      expect(page).to_not have_content('Contacts')
+    end
+
   end
 
 feature 'user login' do

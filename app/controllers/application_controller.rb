@@ -1,15 +1,13 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  helper_method :current_user, :require_login, :authorize
+  helper_method :current_user, :require_login
 
   def current_user
-      @current_user ||= User.find(session[:user_id]) if session[:user_id]
-  end
-
-    def authorize
-      redirect_to '/login' unless current_user
+    if session[:user_id] && User.exists?(session[:user_id])
+      User.find(session[:user_id])
     end
+  end
 
   def require_login
     unless current_user

@@ -12,21 +12,20 @@
   <body>
     <header>
       <% if current_user %>
-        <p class = 'login_status'>Signed in as <%= @current_user.email %> | <a href="/logout">Logout</a> | <%= link_to "DELETE ACCOUNT", user_path(@current_user.id), :method => :delete, :confirm => "Warning! This action will PERMANANTLY delete your account and all of your contacts. Continue?"%>
-      <% end %></p>
+        <p class = 'login_status'>Signed in as <%= current_user.email %> | <a href="/logout">Logout</a> | <%= link_to "DELETE ACCOUNT", user_path(current_user.id), :method => :delete, :confirm => "Warning! This action will PERMANANTLY delete your account and all of your contacts. Continue?"%>
+      </p>
 
       <h1 class="title">Rolodex</h1>
       <h4 class="subtitle">contact information database</h4>
 
-      <% if current_user %>
       <ul class="nav">
-        <a href="/<%= @current_user.id %>"><li class="navlink">List all contacts</li></a>
+        <a href="/<%= current_user.id %>"><li class="navlink">List all contacts</li></a>
         <a href="/contacts/new"><li class="navlink">Add a contact</li></a>
         <a href="/"><li class="navlink">About</li></a>
-        <% end %>
+        <li id="alert"><%= flash[:alert] %></li>
 
       </ul>
-
+<% end %>
     </header>
     <%= yield %>
   </body>

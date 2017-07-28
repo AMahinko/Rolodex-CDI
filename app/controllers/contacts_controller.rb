@@ -1,8 +1,8 @@
 class ContactsController < ApplicationController
-  before_action :authorize
+  before_action :require_login
 
   def index
-    @user = @current_user
+    @user = current_user
     @contacts = Contact.all
   end
 
@@ -12,19 +12,21 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
-    @contact.user_id = @current_user.id
+    user = current_user
+    @contact.user_id = user.id
     if @contact.save
-      redirect_to "/#{@current_user.id}"
+      redirect_to "/#{user.id}"
     end
   end
 
   def show
-    @user = @current_user
-    if @user.id == params[:user_id]
-      @contact = Contact.find(params[:id])
+    @user = current_user
+    @contact = Contact.find(params[:id])
+    if @user.id == @contact.user_id
+      render "show.html.erb"
     else
-      redirect_to '/'
-    end 
+      redirect_to root_path
+    end
   end
 
   def destroy
