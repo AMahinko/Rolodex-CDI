@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :require_login, only: :destroy
 
   def new
     @user = User.new
@@ -11,19 +12,16 @@ class UsersController < ApplicationController
       session[:user_id] = current_user.id
       redirect_to "/#{current_user.id}"
     else
+      flash[:alert] = 'Your information was missing or invalid. Please try again.'
       redirect_to '/signup'
     end
   end
 
   def destroy
-    # if session[:id] == params[:id]
-    #   @user.delete
       current_user.destroy
       session[:user_id] = nil
       flash[:alert] = 'Account deleted!'
       redirect_to '/'
-    # end
-
 
   end
 

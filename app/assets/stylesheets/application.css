@@ -36,6 +36,11 @@
    text-align: center;
  }
 
+ #alert {
+   color: red;
+   text-align: center;
+ }
+
  h1,
  h3,
  h4,

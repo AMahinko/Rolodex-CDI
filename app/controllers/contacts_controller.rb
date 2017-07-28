@@ -20,8 +20,9 @@ class ContactsController < ApplicationController
 
   def show
     @user = current_user
-    @contact = Contact.find(params[:id])
-    if @user.id == @contact.user_id
+    #shows contacts if and only if they exist and match the user id
+    @contact = Contact.find(params[:id]) if Contact.exists?(params[:id])
+    if @contact && @user.id == @contact.user_id
       render "show.html.erb"
     else
       redirect_to root_path
@@ -40,8 +41,12 @@ class ContactsController < ApplicationController
 
   def update
     contact = Contact.find(params[:id])
-    contact.update(contact_params)
-    redirect_to contacts_path
+    if contact.update(contact_params)
+      redirect_to contacts_path
+    else
+      flash[:alert] = 'Email invalid'
+      redirect_to edit_contact_path(contact.id)
+    end
   end
 
 private

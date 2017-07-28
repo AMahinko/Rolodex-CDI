@@ -8,7 +8,7 @@
 
 User.create({email:'test@tester.com', password: '1234', password_confirmation: '1234', id:1})
 
-Contact.create({first_name: "Karl", last_name: "Hungus", email: "k_hung@treehornpictures.com", user_id:1, phone:"555-555-5555", note: "0/10, didn't even fix the cable"})
+Contact.create({first_name: "Karl", last_name: "Hungus", email: "k_hungus@treehornpictures.com", user_id:1, phone:"555-555-5555", note: "0/10, didn't even fix the cable"})
 Contact.create({first_name: "Jesus", last_name: "Quintana", email: "thejesus@diosmio.man", user_id:1, phone:"555-555-5555", note: "You got a date wednesday"})
 Contact.create({first_name: "Jeffery", last_name: "Lebowski", email:"thedude@abides.net", user_id:1, phone:"555-555-5555", note: "He can keep the rug"})
 Contact.create({first_name: "Donald", last_name: "Kerabatsos", email:"SHUTTHEFUCKUP@DONNY.com", user_id:1, phone:"555-555-5555", note: "Out of his element"})

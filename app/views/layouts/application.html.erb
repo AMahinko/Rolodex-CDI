@@ -23,10 +23,14 @@
         <a href="/<%= current_user.id %>"><li class="navlink">List all contacts</li></a>
         <a href="/contacts/new"><li class="navlink">Add a contact</li></a>
         <a href="/"><li class="navlink">About</li></a>
-        <li id="alert"><%= flash[:alert] %></li>
 
       </ul>
 <% end %>
+<h4 id="alert"><%= flash[:alert] %></h4>
+
+
+
+
     </header>
     <%= yield %>
   </body>
