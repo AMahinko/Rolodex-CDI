@@ -46,8 +46,8 @@ RSpec, Capybara and simplecov for testing, as well as bcrypt for authentication
 
 #### Future additions
 
-.. Scalability. Paginate the contacts and allow the user to browse through them with AJAX requests, so the user isn't requesting all of their contacts at once whenever they log in.
+Scalability. Paginate the contacts and allow the user to browse through them with AJAX requests, so the user isn't requesting all of their contacts at once whenever they log in.
 
-.. A search function. Pretty essential for an address book.
+A search function. Pretty essential for an address book.
 
-.. Logins with oauth and google contact integration.
+Logins with oauth and google contact integration.
