@@ -15,6 +15,12 @@
         1,
         null,
         null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
         null
       ],
       "/home/alex/Documents/kinetic_code_challenge/kinetic_CRM/spec/rails_helper.rb": [
@@ -318,7 +324,6 @@
       "/home/alex/Documents/kinetic_code_challenge/kinetic_CRM/app/controllers/contacts_controller.rb": [
         1,
         1,
-        null,
         1,
         17,
         17,
@@ -332,8 +337,6 @@
         5,
         5,
         5,
-        null,
-        null,
         5,
         5,
         null,
@@ -513,7 +516,6 @@
         1,
         1,
         1,
-        null,
         1,
         null,
         null,
@@ -625,6 +627,7 @@
         1,
         1,
         1,
+        1,
         null,
         null,
         null,
@@ -642,12 +645,16 @@
       "/home/alex/Documents/kinetic_code_challenge/kinetic_CRM/app/models/contact.rb": [
         1,
         1,
+        null,
         1,
         null,
         1,
         8,
         8,
         null,
+        null,
+        null,
+        1,
         null,
         null,
         null
@@ -690,6 +697,6 @@
         null
       ]
     },
-    "timestamp": 1501219430
+    "timestamp": 1501224379
   }
 }

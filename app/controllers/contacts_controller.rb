@@ -1,6 +1,5 @@
 class ContactsController < ApplicationController
   before_action :require_login
-
   def index
     @user = current_user
     @contacts = Contact.all

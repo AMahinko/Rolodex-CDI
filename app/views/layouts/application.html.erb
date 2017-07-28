@@ -6,13 +6,14 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag :defaults %>
     <link href="https://fonts.googleapis.com/css?family=Audiowide|Exo+2" rel="stylesheet">
   </head>
 
   <body>
     <header>
       <% if current_user %>
-        <p class = 'login_status'>Signed in as <%= current_user.email %> | <a href="/logout">Logout</a> | <%= link_to "DELETE ACCOUNT", user_path(current_user.id), :method => :delete, :confirm => "Warning! This action will PERMANANTLY delete your account and all of your contacts. Continue?"%>
+        <p class = 'login_status'>Signed in as <%= current_user.email %> | <a href="/logout">Logout</a> | <%= link_to "DELETE ACCOUNT", user_path(current_user.id), :method => :delete, data: {confirm: "This action will PERMANANTLY delete your account and all of your contacts. Continue?"}%>
       </p>
 
       <h1 class="title">Rolodex</h1>
