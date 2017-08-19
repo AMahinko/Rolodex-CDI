@@ -28,6 +28,10 @@
    font-size: 2em;
  }
 
+ @media (min-width: 980px) {
+
+ }
+
  #main_title {
    text-align: center;
  }
@@ -53,13 +57,16 @@ form {
   margin: auto;
   margin-top: 20px;
   display: block;
-  width: 200px;
+  /*width: 200px;*/
+  text-align: center;
 }
 
 input, textarea {
+  display: block;
+  margin: auto;
   background-color: rgba(0,0,0,0);
   border: solid aqua 1px;
-  margin: 5px;
+  margin-bottom: 25px;
   padding: 3px;
   color: #FF69B4;
 }

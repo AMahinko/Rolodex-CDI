@@ -12,12 +12,12 @@
 
   <body>
     <header>
+      <h1 class="title">Rolodex</h1>
+      <h4 class="subtitle">contact information database</h4>
       <% if current_user %>
         <p class = 'login_status'>Signed in as <%= current_user.email %> | <a href="/logout">Logout</a> | <%= link_to "DELETE ACCOUNT", user_path(current_user.id), :method => :delete, data: {confirm: "This action will PERMANANTLY delete your account and all of your contacts. Continue?"}%>
       </p>
 
-      <h1 class="title">Rolodex</h1>
-      <h4 class="subtitle">contact information database</h4>
 
       <ul class="nav">
         <a href="/<%= current_user.id %>"><li class="navlink">List all contacts</li></a>

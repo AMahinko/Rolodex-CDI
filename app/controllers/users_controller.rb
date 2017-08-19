@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :require_login, only: :destroy
+  # before_action :require_logint, only: :destroy
 
   def new
     @user = User.new
