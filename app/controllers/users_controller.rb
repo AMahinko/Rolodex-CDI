@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  # before_action :require_logint, only: :destroy
+  before_action :require_login, only: :destroy
+  before_action :check_signed_in, only: :new
 
   def new
     @user = User.new
@@ -23,6 +24,12 @@ class UsersController < ApplicationController
       flash[:alert] = 'Account deleted!'
       redirect_to '/'
 
+  end
+
+  def check_signed_in
+    if current_user
+      redirect_to "/#{current_user.id}"
+    end
   end
 
 
